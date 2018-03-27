@@ -10,11 +10,13 @@ export class BoardComponent implements OnInit {
   game: Game;
   playState: boolean;
   animationInterval;
-  shapeSelected: boolean;
+  shapeSelected: boolean[][];
+  library: Library;
   constructor() {
     this.playState = false;
     this.game = new Game(20, 20);
-    this.shapeSelected = true;
+    this.shapeSelected = [];
+    this.library = new Library();
   }
 
   ngOnInit() {
@@ -24,21 +26,27 @@ export class BoardComponent implements OnInit {
     if (currentCell.state) {
       return "cell black";
     } else {
-      return "cell grey"
+      return "cell white"
     }
   }
 
-
+  shapeCellClass(currentCell) {
+    if (currentCell) return "shapeCell grey";
+    else return "shapeCell white"
+  }
 
   clickCell(currentCell) {
-    if (this.shapeSelected) {
+    if (this.shapeSelected.length > 0) {
       //place shape
-      console.log('shape insert');
-      this.game.placeShape(currentCell);
+      this.game.placeShape(currentCell, this.shapeSelected);
     } else {
       //flip single cell
       currentCell.state = !currentCell.state;
     }
+  }
+
+  clickShape(currentShape) {
+    this.shapeSelected = currentShape;
   }
 
   togglePlay() {
@@ -58,9 +66,6 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  insertShape(currentCell) {
-
-  }
 
   nextState() {
     this.game.findNextState();
@@ -93,10 +98,7 @@ export class Game {
     }
   }
 
-  placeShape(insertCell) {
-    let shape = [[false, true, false],
-             [false, false, true],
-             [true, true, true]];
+  placeShape(insertCell, shape) {
     for (let i = 0; i < shape.length; i++) {
       for (let j = 0; j < shape[0].length; j++) {
         this.board[i + insertCell.row][j + insertCell.column].state = shape[i][j];
@@ -156,6 +158,17 @@ export class Game {
       }
     }
   }
+}
 
-
+export class Library {
+  glider: boolean[][];
+  toad: boolean[][];
+  beehive: boolean[][];
+  shapes: boolean[][][];
+  constructor() {
+    this.glider = [[false, true, false], [false, false, true], [true, true, true]];
+    this.toad = [[false, true, true, true], [true, true, true, false]];
+    this.beehive = [[false, true, true, false], [true, false, false, true], [false, true, true, false]];
+    this.shapes = [this.glider, this.toad, this.beehive];
+  }
 }
