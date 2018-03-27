@@ -1,0 +1,26 @@
+#board {
+  margin: auto;
+}
+
+.button {
+ margin-left: 50%;
+}
+
+#stateButton {
+  margin-left: -40px;
+  width: 80px;
+  height: 25px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.black {
+  background-color: black;
+}

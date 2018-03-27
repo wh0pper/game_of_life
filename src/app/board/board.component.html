@@ -1,0 +1,11 @@
+
+<table id="board">
+  <tr *ngFor="let currentRow of game.board">
+    <td [class]="cellClass(currentCell)" *ngFor="let currentCell of currentRow" (click)="toggleCell(currentCell)">
+    </td>
+  </tr>
+</table>
+<br>
+<div class="button">
+  <button id="stateButton" (click)="togglePlay()">{{togglePlayButton()}}</button>
+</div>
