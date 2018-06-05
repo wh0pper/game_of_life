@@ -164,11 +164,13 @@ export class Library {
   glider: boolean[][];
   toad: boolean[][];
   beehive: boolean[][];
+  spaceship: boolean[][];
   shapes: boolean[][][];
   constructor() {
     this.glider = [[false, true, false], [false, false, true], [true, true, true]];
     this.toad = [[false, true, true, true], [true, true, true, false]];
     this.beehive = [[false, true, true, false], [true, false, false, true], [false, true, true, false]];
-    this.shapes = [this.glider, this.toad, this.beehive];
+    this.spaceship = [[false, true, true, true, true], [true, false, false, false, true], [false, false, false, false, true], [true, false, false, true, false]];
+    this.shapes = [this.glider, this.toad, this.beehive, this.spaceship];
   }
 }
