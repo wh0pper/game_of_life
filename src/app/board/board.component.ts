@@ -12,10 +12,18 @@ export class BoardComponent implements OnInit {
   animationInterval;
   shapeSelected: boolean[][];
   library: Library;
+  boardRows: number;
+  boardCols: number;
 
   constructor() {
     this.playState = false;
-    this.game = new Game(20, 20);
+    let screenWidth = window.innerWidth;
+    let screenHeight = window.innerHeight;
+    this.boardRows = Math.floor(screenHeight/20);
+    this.boardCols = Math.floor(screenWidth/20);
+    console.log('width x height': screenWidth, screenHeight);
+    console.log('rows x cols': this.boardRows, this.boardCols);
+    this.game = new Game(this.boardRows, this.boardCols);
     this.shapeSelected = [];
     this.library = new Library();
   }
