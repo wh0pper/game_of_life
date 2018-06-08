@@ -12,6 +12,7 @@ export class BoardComponent implements OnInit {
   animationInterval;
   shapeSelected: boolean[][];
   library: Library;
+
   constructor() {
     this.playState = false;
     this.game = new Game(20, 20);
@@ -65,7 +66,6 @@ export class BoardComponent implements OnInit {
       return "Play";
     }
   }
-
 
   nextState() {
     this.game.findNextState();
