@@ -67,13 +67,13 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  togglePlayButton() {
-    if (this.playState) {
-      return "Pause";
-    } else {
-      return "Play";
-    }
-  }
+  // togglePlayButton() {
+  //   if (this.playState) {
+  //     return "Pause";
+  //   } else {
+  //     return "Play";
+  //   }
+  // }
 
   nextState() {
     this.game.findNextState();

@@ -1,3 +1,9 @@
+#play-button {
+  width: 75px;
+  height: 75px;
+  fill: #6eff00;
+}
+
 #board {
   margin: auto;
 }
