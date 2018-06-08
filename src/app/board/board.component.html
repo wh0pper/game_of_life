@@ -6,8 +6,9 @@
 </table>
 
 <br>
-<div class="button">
-  <button id="stateButton" (click)="togglePlay()">{{togglePlayButton()}}</button>
+<div class="button" (click)="togglePlay()">
+  <img id="play-button" src="assets/buttons.svg" width="80px" height="80px">
+  <!-- <button id="stateButton" (click)="togglePlay()">{{togglePlayButton()}}</button> -->
 </div>
 <div class="button">
   <button id="nextButton" (click)="nextState()">Next</button>

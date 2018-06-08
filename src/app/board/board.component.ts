@@ -19,8 +19,8 @@ export class BoardComponent implements OnInit {
     this.playState = false;
     let screenWidth = window.innerWidth;
     let screenHeight = window.innerHeight;
-    this.boardRows = Math.floor(screenHeight/20);
-    this.boardCols = Math.floor(screenWidth/20);
+    this.boardRows = Math.floor((screenHeight-90)/30);
+    this.boardCols = Math.floor(screenWidth/30);
     console.log('width x height': screenWidth, screenHeight);
     console.log('rows x cols': this.boardRows, this.boardCols);
     this.game = new Game(this.boardRows, this.boardCols);
@@ -179,6 +179,7 @@ export class Library {
     this.toad = [[false, true, true, true], [true, true, true, false]];
     this.beehive = [[false, true, true, false], [true, false, false, true], [false, true, true, false]];
     this.spaceship = [[false, true, true, true, true], [true, false, false, false, true], [false, false, false, false, true], [true, false, false, true, false]];
-    this.shapes = [this.glider, this.toad, this.beehive, this.spaceship];
+    this.pentadecathlon = [[true, true, true], [true, false, true], [true, true, true], [true, true, true], [true, true, true], [true, true, true], [true, false, true], [true, true, true],]
+    this.shapes = [this.glider, this.toad, this.beehive, this.spaceship, this.pentadecathlon];
   }
 }
