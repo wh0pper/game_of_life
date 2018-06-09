@@ -17,12 +17,12 @@ export class BoardComponent implements OnInit {
 
   constructor() {
     this.playState = false;
-    let screenWidth = window.innerWidth;
-    let screenHeight = window.innerHeight;
-    this.boardRows = Math.floor(.9 * screenHeight/30);
+    let screenWidth: number = window.innerWidth;
+    let screenHeight: number = window.innerHeight;
+    this.boardRows = Math.floor(.85 * screenHeight/30);
     this.boardCols = Math.floor(.9 * screenWidth/30);
-    console.log('width x height:' screenWidth, screenHeight);
-    console.log('rows x cols:' this.boardRows, this.boardCols);
+    console.log('width x height:', screenWidth, screenHeight);
+    console.log('rows x cols:', this.boardRows, this.boardCols);
     this.game = new Game(this.boardRows, this.boardCols);
     this.shapeSelected = [];
     // this.library = new Library();
