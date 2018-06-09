@@ -39,10 +39,7 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  shapeCellClass(currentCell) {
-    if (currentCell) return "shapeCell grey";
-    else return "shapeCell white"
-  }
+
 
   clickCell(currentCell) {
     if (this.shapeSelected.length > 0) {
@@ -54,9 +51,7 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  clickShape(currentShape) {
-    this.shapeSelected = currentShape;
-  }
+
 
   togglePlay() {
     this.playState = !this.playState;

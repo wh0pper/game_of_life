@@ -8,15 +8,6 @@
   margin: auto;
 }
 
-#library {
-}
-
-.shape {
-  margin: 10px;
-  display: inline-block;
-  border: 1px solid grey;
-}
-
 .button {
  margin-left: 50%;
 }
@@ -30,11 +21,6 @@
 .cell {
   width: 30px;
   height: 30px;
-}
-
-.shapeCell {
-  width: 20px;
-  height: 20px;
 }
 
 .white {

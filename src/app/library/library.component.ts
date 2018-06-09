@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LibraryComponent implements OnInit {
   shapes: any[][];
+  shapeSelected: any[][];
   constructor() { }
 
   ngOnInit() {
@@ -18,5 +19,13 @@ export class LibraryComponent implements OnInit {
     this.shapes = [glider, toad, beehive, spaceship, pentadecathlon];
   }
 
+  clickShape(currentShape) {
+    this.shapeSelected = currentShape;
+  }
+
+  shapeCellClass(currentCell) {
+    if (currentCell) return "shapeCell grey";
+    else return "shapeCell white"
+  }
 
 }
