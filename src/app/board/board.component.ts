@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrentGameService } from '../current-game.service';
+import { CurrentGame } from '../current-game';
 
 @Component({
   selector: 'app-board',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  game: Game;
+  game: CurrentGame;
   playState: boolean;
   animationInterval;
   shapeSelected: boolean[][];
@@ -15,7 +17,7 @@ export class BoardComponent implements OnInit {
   boardRows: number;
   boardCols: number;
 
-  constructor() {
+  constructor(public currentGameService: CurrentGameService) {
     this.playState = false;
     let screenWidth: number = window.innerWidth;
     let screenHeight: number = window.innerHeight;
