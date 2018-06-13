@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { CurrentGameService } from '../current-game.service';
 import { Game } from '../game';
 
@@ -9,7 +10,7 @@ import { Game } from '../game';
 })
 export class BoardComponent implements OnInit {
 
-  game: Game;
+  game: Observable<Game>;
   playState: boolean;
   animationInterval;
   shapeSelected: boolean[][];

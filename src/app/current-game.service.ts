@@ -21,8 +21,12 @@ export class CurrentGameService {
     this.currentGame = new Game(this.boardRows, this.boardCols);
   }
 
-  public getCurrentGame() {
-    return this.currentGame;
+  public getCurrentGame(): Observable<Game> {
+    return of(this.currentGame);
+  }
+
+  public selectShape(shapeArray) {
+    this.currentGame.selectedShape = shapeArray;
   }
 
 }

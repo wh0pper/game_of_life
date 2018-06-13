@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrentGameService } from '../current-game.service';
 
 @Component({
   selector: 'app-library',
@@ -20,7 +21,8 @@ export class LibraryComponent implements OnInit {
   }
 
   clickShape(currentShape) {
-    this.shapeSelected = currentShape;
+    console.log(currentShape);
+    this.currentGameService.selectShape(currentShape);
   }
 
   shapeCellClass(currentCell) {
