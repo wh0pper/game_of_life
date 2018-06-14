@@ -3,8 +3,12 @@ import { Cell } from './cell';
 export class Game {
   selectedShape: any[][];
   playState: boolean;
+  board: Cell[][];
 
-  constructor(public rows: number, public columns: number) {
+  constructor(public rows: number, public cols: number, board) {
+    this.board = board;
+    // this.board = new Array(rows).fill(new Array(cols).fill(new Cell()));
+    console.log(this.board);
   }
 
   placeShape(insertCell, shape) {

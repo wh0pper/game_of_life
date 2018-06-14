@@ -9,11 +9,10 @@ import { Cell } from '../cell';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-
   game: Game;
-  playState: boolean;
+  // playState: boolean;
   animationInterval;
-  shapeSelected: boolean[][];
+  // shapeSelected: boolean[][];
   board: Cell[][] = [];
   rows: number;
   cols: number;
@@ -21,10 +20,11 @@ export class BoardComponent implements OnInit {
 
   constructor(public gameStateService: GameStateService) {
     this.playState = false;
-    this.game = gameStateService.getGameState().subscribe(data => {
-      this.game = data;
-      console.log(this.game.board);
-    });
+
+    // this.game = gameStateService.getGameState().subscribe(data => {
+    //   this.game = data;
+    //   console.log(this.game.board);
+    // });
     this.shapeSelected = [[true]];
   }
 
@@ -41,6 +41,7 @@ export class BoardComponent implements OnInit {
       }
       this.board.push(row);
     }
+    this.game = new Game(this.rows, this.cols, this.board);
   }
 
   cellClass(currentCell) {
