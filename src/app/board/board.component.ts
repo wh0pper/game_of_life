@@ -10,7 +10,7 @@ import { Game } from '../game';
 })
 export class BoardComponent implements OnInit {
 
-  game: Observable<Game>;
+  game: Game;
   playState: boolean;
   animationInterval;
   shapeSelected: boolean[][];
@@ -20,9 +20,10 @@ export class BoardComponent implements OnInit {
 
   constructor(public currentGameService: CurrentGameService) {
     this.playState = false;
-    this.game = currentGameService.getCurrentGame();
-    console.log(this.game);
-    //this.game
+    this.game = currentGameService.getCurrentGame().subscribe(data => {
+      this.game = data;
+      console.log(data);
+    });
     this.shapeSelected = [];
     // this.library = new Library();
   }
