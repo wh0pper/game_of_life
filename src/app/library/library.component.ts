@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrentGameService } from '../current-game.service';
+import { GameStateService } from '../game-state.service';
 
 @Component({
   selector: 'app-library',
@@ -11,7 +11,7 @@ export class LibraryComponent implements OnInit {
   shapeSelected: any[][];
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(public gameStateService: GameStateService) {
     let glider = [[false, true, false], [false, false, true], [true, true, true]];
     let toad = [[false, true, true, true], [true, true, true, false]];
     let beehive = [[false, true, true, false], [true, false, false, true], [false, true, true, false]];
@@ -22,7 +22,7 @@ export class LibraryComponent implements OnInit {
 
   clickShape(currentShape) {
     console.log(currentShape);
-    this.currentGameService.selectShape(currentShape);
+    this.gameStateService.selectShape(currentShape);
   }
 
   shapeCellClass(currentCell) {

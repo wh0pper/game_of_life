@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CurrentGameService } from '../current-game.service';
+import { GameStateService } from '../game-state.service';
 import { Game } from '../game';
 
 @Component({
@@ -18,9 +18,9 @@ export class BoardComponent implements OnInit {
   boardRows: number;
   boardCols: number;
 
-  constructor(public currentGameService: CurrentGameService) {
+  constructor(public gameStateService: GameStateService) {
     this.playState = false;
-    this.game = currentGameService.getCurrentGame().subscribe(data => {
+    this.game = gameStateService.getGameState().subscribe(data => {
       this.game = data;
       console.log(data);
     });

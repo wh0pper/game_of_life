@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { LibraryComponent } from './library/library.component';
 
-import { CurrentGameService } from './current-game.service';
+import { GameStateService } from './game-state.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { CurrentGameService } from './current-game.service';
     BrowserModule
   ],
   providers: [
-    CurrentGameService
+    GameStateService
   ],
   bootstrap: [AppComponent]
 })
