@@ -3,16 +3,8 @@ import { Cell } from './cell';
 export class Game {
   selectedShape: any[][];
   playState: boolean;
-  board: Cell[][];
-  constructor(rows, columns) {
-    this.board = [];
-    for (let i = 0; i < rows; i++) {
-      let row: Cell[] = [];
-      for (let j = 0; j < columns; j++) {
-        row.push(new Cell(i, j));
-      }
-      this.board.push(row);
-    }
+
+  constructor(public rows: number, public columns: number) {
   }
 
   placeShape(insertCell, shape) {

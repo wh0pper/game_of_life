@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { GameStateService } from '../game-state.service';
 import { Game } from '../game';
-
+import { Cell } from '../cell';
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -14,21 +14,33 @@ export class BoardComponent implements OnInit {
   playState: boolean;
   animationInterval;
   shapeSelected: boolean[][];
-  // library: Library;
-  boardRows: number;
-  boardCols: number;
+  board: Cell[][] = [];
+  rows: number;
+  cols: number;
+  // board: boolean[][] = [[false, false, false], [false, false, false], [false, false, false]];
 
   constructor(public gameStateService: GameStateService) {
     this.playState = false;
     this.game = gameStateService.getGameState().subscribe(data => {
       this.game = data;
-      console.log(data);
+      console.log(this.game.board);
     });
-    this.shapeSelected = [];
-    // this.library = new Library();
+    this.shapeSelected = [[true]];
   }
 
   ngOnInit() {
+    // find current browser dimensions and generate relatively sized board
+    let screenWidth: number = window.innerWidth;
+    let screenHeight: number = window.innerHeight;
+    this.rows = Math.floor(.85 * screenHeight/30);
+    this.cols = Math.floor(.9 * screenWidth/30);
+    for (let i = 0; i < this.rows; i++) {
+      let row: Cell[] = [];
+      for (let j = 0; j < this.cols; j++) {
+        row.push(new Cell(i, j));
+      }
+      this.board.push(row);
+    }
   }
 
   cellClass(currentCell) {

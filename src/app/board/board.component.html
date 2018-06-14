@@ -1,5 +1,5 @@
 <table id="board">
-  <tr *ngFor="let currentRow of game.board">
+  <tr *ngFor="let currentRow of board">
     <td [class]="cellClass(currentCell)" *ngFor="let currentCell of currentRow" (click)="clickCell(currentCell)">
     </td>
   </tr>
