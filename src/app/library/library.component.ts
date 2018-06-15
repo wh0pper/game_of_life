@@ -8,10 +8,11 @@ import { GameStateService } from '../game-state.service';
 })
 export class LibraryComponent implements OnInit {
   shapes: any[][];
-  shapeSelected: any[][];
-  constructor() { }
+  selectedShape: any[][];
 
-  ngOnInit(public gameStateService: GameStateService) {
+  constructor(public gameStateService: GameStateService) { }
+
+  ngOnInit() {
     let glider = [[false, true, false], [false, false, true], [true, true, true]];
     let toad = [[false, true, true, true], [true, true, true, false]];
     let beehive = [[false, true, true, false], [true, false, false, true], [false, true, true, false]];
@@ -21,7 +22,6 @@ export class LibraryComponent implements OnInit {
   }
 
   clickShape(currentShape) {
-    console.log(currentShape);
     this.gameStateService.selectShape(currentShape);
   }
 

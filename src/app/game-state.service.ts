@@ -10,19 +10,23 @@ import { Game } from './game';
 )
 
 export class GameStateService {
-  gameState: Game;
+  isPlaying: boolean = false;
+  selectedShape: boolean[][] = [[true]];
 
   constructor() {
-
-    this.gameState = new Game(this.boardRows, this.boardCols);
   }
 
-  public getGameState(): Observable<Game> {
-    return of(this.gameState);
+  public subscribeToPlayState(): Observable<boolean> {
+    return of(this.isPlaying);
   }
 
   public selectShape(shapeArray) {
-    this.gameState.selectedShape = shapeArray;
+    this.selectedShape = shapeArray;
+    console.log(this.selectedShape);
+  }
+
+  public subscribeToShape(): Observable<boolean[][]> {
+    return of(this.selectedShape);
   }
 
 }
