@@ -22,10 +22,9 @@ export class GameStateService {
 
   public selectShape(shapeArray) {
     this.selectedShape = shapeArray;
-    console.log(this.selectedShape);
   }
 
-  public subscribeToShape(): Observable<boolean[][]> {
+  public subscribeToShape(): Observable<any> {
     return of(this.selectedShape);
   }
 

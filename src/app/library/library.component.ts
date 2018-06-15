@@ -7,8 +7,8 @@ import { GameStateService } from '../game-state.service';
   styleUrls: ['./library.component.css']
 })
 export class LibraryComponent implements OnInit {
-  shapes: any[][];
-  selectedShape: any[][];
+  shapes: any[];
+  selectedShape: boolean[][];
 
   constructor(public gameStateService: GameStateService) { }
 

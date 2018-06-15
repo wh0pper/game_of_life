@@ -21,9 +21,13 @@ export class BoardComponent implements OnInit {
 
   constructor(public gameStateService: GameStateService) {
     gameStateService.subscribeToPlayState().subscribe(stateObservable => {
+      console.log(stateObservable);
       this.isPlaying = stateObservable;
     });
-    gameStateService.subscribeToShape().subscribe(shapeObservable => this.selectedShape = shapeObservable );
+    gameStateService.subscribeToShape().subscribe(shapeObservable => {
+      console.log(shapeObservable);
+      this.selectedShape = shapeObservable;
+    });
   }
 
   ngOnInit() {
@@ -53,6 +57,7 @@ export class BoardComponent implements OnInit {
   clickCell(currentCell) {
     if (!currentCell.state) {
       //place shape
+      console.log(this.selectedShape);
       this.game.placeShape(currentCell, this.selectedShape);
     } else {
       //flip single cell
@@ -68,14 +73,6 @@ export class BoardComponent implements OnInit {
       clearInterval(this.animationInterval);
     }
   }
-
-  // togglePlayButton() {
-  //   if (this.playState) {
-  //     return "Pause";
-  //   } else {
-  //     return "Play";
-  //   }
-  // }
 
   nextState() {
     this.game.findNextState();
