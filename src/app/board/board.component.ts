@@ -11,7 +11,6 @@ import { Cell } from '../cell';
 })
 export class BoardComponent implements OnInit {
   game: Game;
-  selectedShape: boolean[][] = [[true]];
   isPlaying: boolean = false;
   animationInterval;
   board: Cell[][] = [];
@@ -24,10 +23,7 @@ export class BoardComponent implements OnInit {
       console.log(stateObservable);
       this.isPlaying = stateObservable;
     });
-    gameStateService.subscribeToShape().subscribe(shapeObservable => {
-      console.log(shapeObservable);
-      this.selectedShape = shapeObservable;
-    });
+
   }
 
   ngOnInit() {
@@ -57,8 +53,7 @@ export class BoardComponent implements OnInit {
   clickCell(currentCell) {
     if (!currentCell.state) {
       //place shape
-      console.log(this.selectedShape);
-      this.game.placeShape(currentCell, this.selectedShape);
+      this.game.placeShape(currentCell, this.gameStateService.selectedShape);
     } else {
       //flip single cell
       currentCell.state = !currentCell.state;

@@ -21,6 +21,7 @@ export class GameStateService {
   }
 
   public selectShape(shapeArray) {
+    console.log('setting selected shape in state: ', shapeArray);
     this.selectedShape = shapeArray;
   }
 

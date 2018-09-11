@@ -22,6 +22,7 @@ export class LibraryComponent implements OnInit {
   }
 
   clickShape(currentShape) {
+    console.log('library clickShape: ', currentShape);
     this.gameStateService.selectShape(currentShape);
   }
 
