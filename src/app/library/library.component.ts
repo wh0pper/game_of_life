@@ -19,7 +19,8 @@ export class LibraryComponent implements OnInit {
     let toad = [[false, true, true, true], [true, true, true, false]];
     let beehive = [[false, true, true, false], [true, false, false, true], [false, true, true, false]];
     let spaceship = [[false, true, true, true, true], [true, false, false, false, true], [false, false, false, false, true], [true, false, false, true, false]];
-    let pentadecathlon = [[true, true, true], [true, false, true], [true, true, true], [true, true, true], [true, true, true], [true, true, true], [true, false, true], [true, true, true]];
+    // let pentadecathlon = [[true, true, true], [true, false, true], [true, true, true], [true, true, true], [true, true, true], [true, true, true], [true, false, true], [true, true, true]];
+    let pentadecathlon = [[true, true, true, true, true, true, true, true], [true, false, true, true, true, true, false, true], [true, true, true, true, true, true, true, true]];
     this.shapes = [one, glider, toad, beehive, spaceship, pentadecathlon];
   }
 
