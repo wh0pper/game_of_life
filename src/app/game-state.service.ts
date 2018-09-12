@@ -13,8 +13,13 @@ export class GameStateService {
   isPlaying: boolean = false;
   selectedShape: boolean[][] = [[true]];
   selectedColor: string = "pink-theme";
+  game: Game;
 
   constructor() {
+  }
+
+  public createGame(rows, cols, board) {
+    this.game = new Game(rows, cols, board)
   }
 
   public subscribeToPlayState(): Observable<boolean> {

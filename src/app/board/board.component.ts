@@ -39,7 +39,7 @@ export class BoardComponent implements OnInit {
       }
       this.board.push(row);
     }
-    this.game = new Game(this.rows, this.cols, this.board);
+    this.gameStateService.createGame(this.rows, this.cols, this.board);
   }
 
   cellClass(currentCell) {
@@ -53,24 +53,24 @@ export class BoardComponent implements OnInit {
   clickCell(currentCell) {
     if (!currentCell.state) {
       //place shape
-      this.game.placeShape(currentCell, this.gameStateService.selectedShape);
+      this.gameStateService.game.placeShape(currentCell, this.gameStateService.selectedShape);
     } else {
       //flip single cell
       currentCell.state = !currentCell.state;
     }
   }
 
-  togglePlay() {
-    this.isPlaying = !this.isPlaying;
-    if (this.isPlaying) {
-      this.animationInterval = setInterval(() => {this.nextState()}, 50);
-    } else {
-      clearInterval(this.animationInterval);
-    }
-  }
-
-  nextState() {
-    this.game.findNextState();
-    this.game.renderNextState();
-  }
+  // togglePlay() {
+  //   this.isPlaying = !this.isPlaying;
+  //   if (this.isPlaying) {
+  //     this.animationInterval = setInterval(() => {this.nextState()}, 50);
+  //   } else {
+  //     clearInterval(this.animationInterval);
+  //   }
+  // }
+  //
+  // nextState() {
+  //   this.game.findNextState();
+  //   this.game.renderNextState();
+  // }
 }

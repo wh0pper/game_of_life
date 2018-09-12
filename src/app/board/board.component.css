@@ -9,29 +9,11 @@
   height: 100vh;
 }
 
-#button-container {
-  width: 100px;
-  margin-left: 50%;
-  /* position: absolute; */
-  margin-bottom: 50px;
-  /* z-index: 2; */
-}
-
-.play-pause {
-  width: 75px;
-  height: 75px;
-  /* fill: #6eff00; */
-}
 
 #board {
   margin: auto;
 }
 
-#stateButton, #nextButton {
-  margin-left: -40px;
-  width: 80px;
-  height: 25px;
-}
 
 .cell {
   width: 30px;
