@@ -2,3 +2,19 @@
 body {
   background-color: #444444;
 }
+
+.green-theme {
+  background-color: #6eff00;
+}
+
+.pink-theme {
+  background-color: #ff38d7;
+}
+
+.orange-theme {
+  background-color: #ff7f00;
+}
+
+.yellow-theme {
+  background-color: #faff00;
+}

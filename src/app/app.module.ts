@@ -7,12 +7,14 @@ import { BoardComponent } from './board/board.component';
 import { LibraryComponent } from './library/library.component';
 
 import { GameStateService } from './game-state.service';
+import { ColorLibraryComponent } from './color-library/color-library.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    LibraryComponent
+    LibraryComponent,
+    ColorLibraryComponent
   ],
   imports: [
     BrowserModule

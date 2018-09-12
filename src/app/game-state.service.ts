@@ -12,6 +12,7 @@ import { Game } from './game';
 export class GameStateService {
   isPlaying: boolean = false;
   selectedShape: boolean[][] = [[true]];
+  selectedColor: string = "pink-theme";
 
   constructor() {
   }

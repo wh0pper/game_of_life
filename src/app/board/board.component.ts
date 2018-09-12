@@ -44,7 +44,7 @@ export class BoardComponent implements OnInit {
 
   cellClass(currentCell) {
     if (currentCell.state) {
-      return "cell black";
+      return `cell ${this.gameStateService.selectedColor}`;
     } else {
       return "cell white"
     }

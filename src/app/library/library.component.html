@@ -1,7 +1,5 @@
 <div id="library">
-  <h4>Selected shape in library: {{selectedShape}}</h4>
-  <h4>Shape library:</h4>
-  <div class="shape" *ngFor="let currentShape of shapes" (click)="clickShape(currentShape)">
+  <div *ngFor="let currentShape of shapes" [class]="shapeClass(currentShape)" (click)="clickShape(currentShape)">
     <table>
       <tr *ngFor="let currentRow of currentShape">
         <td [class]="shapeCellClass(currentCell)" *ngFor="let currentCell of currentRow">
