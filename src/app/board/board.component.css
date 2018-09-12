@@ -1,4 +1,10 @@
-#play-button {
+/* #play-button {
+  width: 75px;
+  height: 75px;
+  fill: #6eff00;
+} */
+
+.play-pause {
   width: 75px;
   height: 75px;
   fill: #6eff00;
