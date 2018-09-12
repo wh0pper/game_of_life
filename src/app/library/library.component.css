@@ -21,8 +21,24 @@ h4 {
   border: 1px solid grey;
 }
 
-.selectedShape {
-  margin: 10px;
-  display: inline-block;
+/* .selected-shape { */
+  /* margin: 10px;
+  display: inline-block; */
+  /* border: 5px solid #6eff00;
+} */
+
+.green-theme-border {
   border: 5px solid #6eff00;
+}
+
+.pink-theme-border {
+  border: 5px solid #ff38d7;
+}
+
+.orange-theme-border {
+  border: 5px solid #ff7f00;
+}
+
+.yellow-theme-border {
+  border: 5px solid #faff00;
 }

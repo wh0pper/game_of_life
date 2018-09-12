@@ -33,7 +33,7 @@ export class LibraryComponent implements OnInit {
     let index = this.shapes.indexOf(currentShape);
     // console.log('current selected shape index: ', this.selectedIndex, index);
     // console.log('passed shape: ', currentShape);
-    if (index == this.selectedIndex) return "selectedShape shape";
+    if (index == this.selectedIndex) return `${this.gameStateService.selectedColor}-border shape`;
     else return "shape";
   }
 
