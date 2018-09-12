@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="play-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 104.9 107.7" style="enable-background:new 0 0 104.9 107.7;" xml:space="preserve">
-<title>Play Button</title>
-<path d="M2,53.4c0-14,0-28,0-42C2,1.5,9.2-2.9,17.8,2c24.6,14,49.1,28.1,73.6,42.4c8.7,5.1,8.7,13.8,0,18.8
-	C67,77.4,42.7,91.5,18.3,105.5C9.1,110.7,2,106.4,2,95.8C2,81.7,2,67.5,2,53.4z"/>
-<path d="M94.1,108.7H81.3c-4.8,0-8.9-4.7-8.9-10.5V11.5C72.5,5.7,76.4,1,81.3,1h12.8c4.8,0,8.9,4.7,8.9,10.5v86.6
-	C102.9,104,99,108.7,94.1,108.7z"/>
-</svg>
+<svg id="play-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.94 107.72"><title>next</title><rect x="71.61" y="0.01" width="29.13" height="107.7"/><polygon points="6.42 107.72 99.1 53.86 6.42 0 6.42 107.72"/></svg>

@@ -19,14 +19,23 @@
   flex-direction: row;
 }
 
-.play-pause {
+.button {
   width: 75px;
   height: 75px;
-  /* fill: #6eff00; */
 }
 
-/* #stateButton, #nextButton {
-  margin-left: -40px;
-  width: 80px;
-  height: 25px;
-} */
+.green-theme-svg {
+  fill: #6eff00;
+}
+
+.pink-theme-svg {
+  fill: #ff38d7;
+}
+
+.orange-theme-svg {
+  fill: #ff7f00;
+}
+
+.yellow-theme-svg {
+  fill: #faff00;
+}

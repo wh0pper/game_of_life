@@ -27,4 +27,8 @@ export class MenuComponent implements OnInit {
     this.gameStateService.game.renderNextState();
   }
 
+  buttonColorClass() {
+    return `button ${this.gameStateService.selectedColor}-svg`
+  }
+
 }
