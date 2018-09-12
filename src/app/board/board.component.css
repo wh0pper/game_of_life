@@ -9,11 +9,9 @@
   height: 100vh;
 }
 
-
 #board {
   margin: auto;
 }
-
 
 .cell {
   width: 30px;

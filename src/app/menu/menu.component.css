@@ -1,9 +1,22 @@
+#menu-container {
+  width: 100%;
+  height: 100px;
+  margin: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #515151;
+}
+
+.menu-child {
+  width: 450px;
+}
+
 #button-container {
   width: 100px;
-  margin-left: 50%;
-  /* position: absolute; */
-  margin-bottom: 50px;
-  /* z-index: 2; */
+  display: flex;
+  flex-direction: row;
 }
 
 .play-pause {
@@ -12,8 +25,8 @@
   /* fill: #6eff00; */
 }
 
-#stateButton, #nextButton {
+/* #stateButton, #nextButton {
   margin-left: -40px;
   width: 80px;
   height: 25px;
-}
+} */
