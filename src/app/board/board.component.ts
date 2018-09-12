@@ -30,7 +30,7 @@ export class BoardComponent implements OnInit {
     // find current browser dimensions and generate relatively sized board
     let screenWidth: number = window.innerWidth;
     let screenHeight: number = window.innerHeight;
-    this.rows = Math.floor(.85 * screenHeight/30);
+    this.rows = Math.floor(.825 * screenHeight/30);
     this.cols = Math.floor(.9 * screenWidth/30);
     for (let i = 0; i < this.rows; i++) {
       let row: Cell[] = [];
