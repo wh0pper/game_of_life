@@ -1,4 +1,4 @@
 <div id="swatch-container">
-  <div class="swatch {{color}}-theme" *ngFor="let color of colors" (click)="selectColor(color)">
+  <div *ngFor="let color of colors" [class]="returnSwatchClass(color)" (click)="selectColor(color)">
   </div>
 </div>

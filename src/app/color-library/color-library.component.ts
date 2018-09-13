@@ -19,4 +19,12 @@ export class ColorLibraryComponent implements OnInit {
     console.log('updated color in state: ', this.gameStateService.selectedColor);
   }
 
+  returnSwatchClass(color) {
+    if ((color+'-theme') == this.gameStateService.selectedColor) {
+      return `swatch ${color}-theme selected`;
+    } else {
+      return `swatch ${color}-theme`;
+    }
+  }
+
 }

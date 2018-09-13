@@ -9,4 +9,9 @@
   height: 50px;
   margin: 5px;
   border: 1px solid grey;
+  opacity: .2;
+}
+
+.selected {
+  opacity: 1;
 }

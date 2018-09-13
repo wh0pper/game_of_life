@@ -18,12 +18,14 @@
   width: 100px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 .button {
   width: 75px;
   height: 75px;
+  /* margin-left: 10px; */
   /* stroke: #505050;
   stroke-width: 5px; */
 }
