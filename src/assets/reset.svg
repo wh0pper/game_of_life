@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 95.9 107.7" style="enable-background:new 0 0 95.9 107.7;" xml:space="preserve">
-<title>buttons</title>
-<path d="M29.8-118.9H14.2c-5.9,0-10.8-4.7-10.8-10.5v-86.7c0.1-5.8,4.9-10.5,10.8-10.5h15.6c5.9,0,10.8,4.7,10.8,10.5v86.6
-	C40.5-123.6,35.8-118.9,29.8-118.9z"/>
-<path d="M81.7-118.9H66.2c-5.9,0-10.8-4.7-10.8-10.5v-86.7c0-5.8,4.8-10.5,10.8-10.5h15.6c5.9,0,10.8,4.7,10.8,10.5v86.6
-	C92.5-123.6,87.7-118.9,81.7-118.9z"/>
-<rect x="3.4" width="37.2" height="107.7"/>
-<rect x="55.4" width="37.2" height="107.7"/>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.7 107.7"><title>reset</title><path d="M53.85,87.62a29,29,0,0,1-2-57.86V43.46L72.4,22.88,51.81,2.29V14.07A44.64,44.64,0,1,0,98.47,59.86H82.79A29,29,0,0,1,53.85,87.62Z"/><path d="M98.47,59.86h0V58.64C98.5,59.05,98.48,59.45,98.47,59.86Z"/></svg>

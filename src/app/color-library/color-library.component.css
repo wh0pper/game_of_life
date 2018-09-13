@@ -1,6 +1,7 @@
 #swatch-container {
   display: flex;
   flex-direction: row;
+  margin-top: 15px;
 }
 
 .swatch {

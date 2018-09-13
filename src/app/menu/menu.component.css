@@ -6,6 +6,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-content: center;
   background-color: #515151;
 }
 
@@ -17,11 +18,14 @@
   width: 100px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .button {
   width: 75px;
   height: 75px;
+  /* stroke: #505050;
+  stroke-width: 5px; */
 }
 
 .green-theme-svg {
