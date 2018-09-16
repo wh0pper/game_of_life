@@ -7,6 +7,7 @@ import { GameStateService } from '../game-state.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  animationInterval;
 
   constructor(private gameStateService: GameStateService) { }
 
@@ -14,8 +15,8 @@ export class MenuComponent implements OnInit {
   }
 
   togglePlay() {
-    this.isPlaying = !this.isPlaying;
-    if (this.isPlaying) {
+    this.gameStateService.togglePlayState();
+    if (this.gameStateService.isPlaying) {
       this.animationInterval = setInterval(() => {this.nextState()}, 50);
     } else {
       clearInterval(this.animationInterval);
@@ -29,6 +30,10 @@ export class MenuComponent implements OnInit {
 
   buttonColorClass() {
     return `button ${this.gameStateService.selectedColor}-svg`
+  }
+
+  resetBoard() {
+    this.gameStateService.resetBoard();
   }
 
 }

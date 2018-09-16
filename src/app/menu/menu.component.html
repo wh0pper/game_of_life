@@ -6,14 +6,14 @@
 
 
   <div class="menu-child" id="button-container">
-    <div *ngIf="!isPlaying" [class]="buttonColorClass()">
+    <div *ngIf="!gameStateService.isPlaying" [class]="buttonColorClass()">
       <svg (click)="togglePlay()" id="play-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.95 107.72">
         <title>play</title>
         <polygon points="1.63 107.72 94.32 53.86 1.63 0 1.63 107.72"/>
       </svg>
 
     </div>
-    <div *ngIf="isPlaying" [class]="buttonColorClass()">
+    <div *ngIf="gameStateService.isPlaying" [class]="buttonColorClass()">
       <svg (click)="togglePlay()" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.9 107.7">
         <title>pause</title>
         <rect x="3.4" width="37.2" height="107.7"/>
@@ -30,7 +30,7 @@
     </div>
 
     <div [class]="buttonColorClass()">
-      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.7 107.7">
+      <svg (click)="resetBoard()" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.7 107.7">
         <title>reset</title>
         <path d="M53.85,87.62a29,29,0,0,1-2-57.86V43.46L72.4,22.88,51.81,2.29V14.07A44.64,44.64,0,1,0,98.47,59.86H82.79A29,29,0,0,1,53.85,87.62Z"/>
         <path d="M98.47,59.86h0V58.64C98.5,59.05,98.48,59.45,98.47,59.86Z"/>

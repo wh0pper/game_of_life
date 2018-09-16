@@ -19,10 +19,10 @@ export class BoardComponent implements OnInit {
   // board: boolean[][] = [[false, false, false], [false, false, false], [false, false, false]];
 
   constructor(public gameStateService: GameStateService) {
-    gameStateService.subscribeToPlayState().subscribe(stateObservable => {
-      console.log(stateObservable);
-      this.isPlaying = stateObservable;
-    });
+    // gameStateService.subscribeToPlayState().subscribe(stateObservable => {
+    //   console.log(stateObservable);
+    //   this.isPlaying = stateObservable;
+    // });
 
   }
 
@@ -39,7 +39,7 @@ export class BoardComponent implements OnInit {
       }
       this.board.push(row);
     }
-    this.gameStateService.createGame(this.rows, this.cols, this.board);
+    this.gameStateService.createGame(this.board);
   }
 
   cellClass(currentCell) {

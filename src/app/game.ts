@@ -4,7 +4,7 @@ export class Game {
   playState: boolean;
   board: Cell[][];
 
-  constructor(public rows: number, public cols: number, board) {
+  constructor(board) {
     this.board = board;
   }
 
