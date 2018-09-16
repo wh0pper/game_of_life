@@ -16,6 +16,16 @@ export class BoardComponent implements OnInit {
   board: Cell[][] = [];
   rows: number;
   cols: number;
+  title: boolean[][] = [
+                        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+                        [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
+                        [true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, true],
+                        [true, false, false, false, true, true, true, false, true, true, true, false, true, true, true, false, true, false, true, false, true, false, true, false, true, false, false, true, true, false, true],
+                        [true, false, true, false, true, false, true, false, true, false, true, false, true, false, false, false, true, false, true, false, true, false, true, false, true, false, false, true, false, false, true],
+                        [true, false, true, false, true, false, true, false, true, true, true, false, true, true, true, false, true, true, true, false, true, false, true, true, true, false, true, true, false, false, true],
+                        [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
+                        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]]
+
   // board: boolean[][] = [[false, false, false], [false, false, false], [false, false, false]];
 
   constructor(public gameStateService: GameStateService) {
@@ -40,6 +50,8 @@ export class BoardComponent implements OnInit {
       this.board.push(row);
     }
     this.gameStateService.createGame(this.board);
+    let center = new Cell(Math.floor(this.rows/2)-4, Math.floor(this.cols/2)-15)
+    this.gameStateService.game.placeShape(center, this.title);
   }
 
   cellClass(currentCell) {
