@@ -3,6 +3,9 @@
     <app-color-library></app-color-library>
   </div>
 
+  <div class="menu-child" >
+    <app-library></app-library>
+  </div>
 
 
   <div class="menu-child" id="button-container">
@@ -36,10 +39,22 @@
         <path d="M98.47,59.86h0V58.64C98.5,59.05,98.48,59.45,98.47,59.86Z"/>
       </svg>
     </div>
+
+      <div [class]="buttonColorClass()">
+          <svg (click)="openWikiDescription()" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 127">
+            <title>questionmark</title>
+            <path d="M71.84,121H53.51V105.3H71.84Zm0-27.38H53.51V73.07l.19-.93c1.76-8.39,7.14-14.31,15.61-17.2l1.14-.76c5-3.3,8.49-6.12,8.49-12.47,0-8.88-8.23-15.26-14.17-16.45C56.22,23.55,50,25,46.41,29.7l-.32.42-.37.38c-4.12,4.19-5.16,6.87-5.16,19H22.23c0-12.3.73-21.79,10.06-31.49,8-10,20.82-13.77,36.08-10.72,14.21,2.84,28.91,16.5,28.91,34.43,0,16.68-11.7,24.43-16.69,27.75-.62.41-1.25.83-1.57,1.07l-1.39,1.06-1.68.48c-3,.85-3.76,1.86-4.1,3Z"/>
+          </svg>
+          <!-- <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">
+            <div id="wiki-link">
+            </div>
+          </a> -->
+        <!-- <div id="wiki-window">
+          <iframe src="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"></iframe>
+        </div> -->
+      </div>
   </div>
 
-  <div class="menu-child" >
-    <app-library></app-library>
-  </div>
+
 
 </div>

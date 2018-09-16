@@ -24,15 +24,11 @@ export class BoardComponent implements OnInit {
                         [true, false, true, false, true, false, true, false, true, false, true, false, true, false, false, false, true, false, true, false, true, false, true, false, true, false, false, true, false, false, true],
                         [true, false, true, false, true, false, true, false, true, true, true, false, true, true, true, false, true, true, true, false, true, false, true, true, true, false, true, true, false, false, true],
                         [true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
-                        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]]
+                        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
+                      ]
 
-  // board: boolean[][] = [[false, false, false], [false, false, false], [false, false, false]];
 
   constructor(public gameStateService: GameStateService) {
-    // gameStateService.subscribeToPlayState().subscribe(stateObservable => {
-    //   console.log(stateObservable);
-    //   this.isPlaying = stateObservable;
-    // });
 
   }
 
@@ -72,17 +68,4 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  // togglePlay() {
-  //   this.isPlaying = !this.isPlaying;
-  //   if (this.isPlaying) {
-  //     this.animationInterval = setInterval(() => {this.nextState()}, 50);
-  //   } else {
-  //     clearInterval(this.animationInterval);
-  //   }
-  // }
-  //
-  // nextState() {
-  //   this.game.findNextState();
-  //   this.game.renderNextState();
-  // }
 }

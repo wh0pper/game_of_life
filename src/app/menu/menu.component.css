@@ -15,17 +15,18 @@
 }
 
 #button-container {
-  width: 100px;
+  width: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
 }
 
 .button {
   width: 75px;
   height: 75px;
-  /* margin-left: 10px; */
+  margin-left: 10px;
   /* stroke: #505050;
   stroke-width: 5px; */
 }
@@ -45,3 +46,19 @@
 .yellow-theme-svg {
   fill: #faff00;
 }
+
+
+#wiki-link {
+  width: 100%;
+  height: auto;
+}
+/* #wiki-window {
+  display: none;
+  width: 700px;
+  height: 500px;
+}
+
+a:hover + #wiki-window,#wiki-window:hover {
+  display: block;
+  position: absolute;
+} */
