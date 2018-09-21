@@ -15,18 +15,18 @@
 }
 
 #button-container {
-  width: 150px;
+  width: 200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .button {
   width: 75px;
   height: 75px;
-  margin-left: 10px;
+  margin-left: 15px;
   /* stroke: #505050;
   stroke-width: 5px; */
 }
@@ -47,6 +47,12 @@
   fill: #faff00;
 }
 
+#library-container {
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  margin-top: 10px;
+}
 
 #wiki-link {
   width: 100%;
