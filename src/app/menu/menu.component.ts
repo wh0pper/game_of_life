@@ -9,7 +9,7 @@ import { GameStateService } from '../game-state.service';
 export class MenuComponent implements OnInit {
   animationInterval;
 
-  constructor(private gameStateService: GameStateService) { }
+  constructor(public gameStateService: GameStateService) { }
 
   ngOnInit() {
   }
